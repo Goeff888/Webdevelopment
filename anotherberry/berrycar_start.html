@@ -1,0 +1,183 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>...noch eine Raspberry-Seite</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Yantramanav:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/berry.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+  <a class="navbar-brand" href="index.html"><i class="fa fa-globe" aria-hidden="true"></i></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="blog.html">News <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Projekte
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="berrycar_start.html">Berrycar</a>
+          <a class="dropdown-item" href="retropi_start.html">Retropi</a>
+          <a class="dropdown-item" href="nvidiashield_start.html">NVIDIA-SHIELD</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Sensoren und Zubehör
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="sensoren_start.html">Sensoren</a>
+          <a class="dropdown-item" href="zubehoer_start.html">Zubehör</a>
+          <a class="dropdown-item" href="bauteile_start.html">Bauteile</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Programmiersprachen
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="c_start.html">C/C++/C#</a>
+          <a class="dropdown-item" href="python_start.html">Python</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="ide_start.html">IDEs, Betriebssysteme</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="suchen" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<div id="center"><img src="img/berryheader_1152_150_grey.jpg"></div>
+
+<div class="row">
+  <div class="col-md-2" id="leftsidebar_projects">
+      <p class="entry1"><a href="berrycar_start.html">Fahrgestell und Zubehör</a></p>
+      <p class="entry1"><a href="berrycar_motoren.html">Motoren und Boards</a></p>
+      <p class="entry1"><a href="berrycar_steuerung.html">Motorsteuerung</a></p>
+      <hr>
+      <h4>Remote steuern</h4>
+        <p class="entry2"><a href="berrycar_remoteweb.html">über Weboberfläche</a></p>
+        <p class="entry2"><a href="berrycar_remotepython.html">Python-App</a></p>
+  </div>
+  <div class="col-md-8" id="content">
+    <h1>Das Berrycar</h1>
+    <p>
+      Für ein Roboterfahrzeug mit einem Raspberry als Steuereinheit, gibt es im Handel bereits fertige Bausätze in unterschiedlichsten Ausführungen.
+      Die Dokumentation zum Zusammenbau ist von der Qualität teilweise von nicht vorhanden bis unverständlich, da viele dieser Bausätze aus China bezogen werden.
+      Es lohnt sich daher auch preislich die Komponenten einzeln zu erwerben.
+    </p>
+    <h2>Was wird benötigt?</h2>
+    <p>
+      Entweder man besorgt sich ein komplettes Set, bei dem der Raspberry sogar dabei ist. Bekannte Hersteller sind kuman und sunfounder.
+      Wer sich die Teile einzeln besorgen möchte, findet hier eine Übersicht, was man benötigt:
+    </p>
+    <h3>Chassis</h3>
+    <p>
+      Das Chassis gibt es in verschiedensten Varianten.
+      Hier lassen sich Fahrzeuge mit einer oder zwei Achsen oder sogar ganze Panzer nachbauen.
+    </p>
+    <h3>Reifen</h3>
+    <p>
+      Die Anzahl der Reifen hängt vom Typ des Autos ab, dass man bauen möchte.
+      Die Reifen findet man im Modellbaubedarf in verschiedenen Ausführungen. Ein Kettenantrieb wie bei einem Panzer lässt sich auch leicht realisieren.
+      Für diesen Bausatz verwende ich Reifen mit einem Durchmesser von ca 65mm und 25mm Breite.
+    </p>
+    
+    <h3>Antrieb und Lenkung</h3>
+    <p>
+      Der Anschluß der Motoren ist Bestandteil des nächsten Artikels.
+      Daher werden hier nur die Teile aufgelistet, die für dieses Projekt benötigt werden.
+    </p>
+
+    <p>Der Antrieb erfolgt über vier Gleichstrom-Motoren.</p>
+    <div align=center>
+    <img class="size-medium" src="img/reifen.jpg" alt=""/>
+    <img class="size-medium" src="img/DCMotor.jpg" alt=""/>
+    <img class="size-medium" src="img/L298N.jpg" alt=""/>
+    <img class="size-medium" src="img/M2x8.jpg" alt=""/>
+    </div><br>
+    <div></div>
+    <p>
+      Die nötige Stromversorgung liefert ein H-Brücken-Treiber (L298N).
+      Die Rotationen der Webcam erfolgen durch zwei Servo-Motoren.  
+      Das Auto steuert über die Laufrichtung der Räder, da beide Seiten getrennt angesteuert werden können.
+      Die Fahrtrichtung wird also durch die unterschiedliche Laufrichtung der Räder verändert.
+    </p>
+    <h3>Kleinteile</h3>
+    <ul>
+      <li>Kabel</li>
+      <li>Abstandhalter</li>
+      <li>Schrauben</li>
+      <li>Nüsse</li>
+      <li>Band zum Fixiern des Akkus</li>
+    </ul>
+
+    <h3>Stromversorgung</h3>
+    <p>
+      Damit das Auto genug Energie für seine Ausflüge hat, benötigen wir noch eine Stromquelle.
+      Hierfür gibt es die Handel üblichen 18650-Lithium-Ionen-Akku mit passender Halterung und Anschlußkabel.
+    </p>
+    <h3>Board</h3>
+    <p>
+      Die Steuerungszentrale wird unser Raspberry Pi 3 Model B mit Raspbian als Betriebssystem.
+      Das Betriebssystem braucht mindestens eine 8GB microSD-Karte.
+    </p>
+
+    <h2>Das Fahrgestell zusammenbauen</h2>
+    <p>
+      Das Chassis besteht bei den meisten Sets aus vorgestanzten Plastikteilen, die man an den vorgestanzten Punkten auseinander bricht und mit Schrauben entsprechend befestigt.
+      Für die Motoren gibt es eigene Halterungen.
+      Akkuhalterung mit den Akkus befestigen wir auf der Rückseite/Unterseite.
+    </p>
+    <p style="text-align: right;">weiter zu Schritt 2: Motortreiberboard</p>  
+  </div>
+      <div class="col-md-2" id="rightsidebar_projects">
+        <h3>Einkaufsliste</h3>
+        <ul>
+          <li>Sets</li>
+            <ul>
+              <li><a target="_blank" href="https://www.amazon.de/gp/product/B07474MMB5/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=B07474MMB5&linkCode=as2&tag=luckhorm-21&linkId=d48baef83df658121a60a98ff69661b1">Elegoo Robot Car</a><img src="//ir-de.amazon-adsystem.com/e/ir?t=luckhorm-21&l=am2&o=3&a=B07474MMB5" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></li>
+              <li><a target="_blank" href="https://www.amazon.de/gp/product/B071J21R3D/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=B071J21R3D&linkCode=as2&tag=luckhorm-21&linkId=067af445829465c713529d79a5aa7d43">Kuman Robot Model Car</a><img src="//ir-de.amazon-adsystem.com/e/ir?t=luckhorm-21&l=am2&o=3&a=B071J21R3D" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></li>
+          </ul>
+          <li>Motoren</li>
+            <ul>
+              <li>über Weboberfläche</li>
+              <li>Python-App</li>
+           </ul>
+          <li>Treiberboards</li>
+            <ul>
+              <li>über Weboberfläche</li>
+              <li>Python-App</li>
+            </ul>          
+        </ul>
+        <hr>
+        <h3>weitere Tips</h3>
+          <ul>
+            <li>Motoren</li>
+            <li>Socketprogrammierung</li>
+         </ul>        
+      </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12" id="footer">
+      <br>
+      <br>
+      <p>2017 | <a href="impressum.html">Impressum</a> | <a href="impressum.html">Datenschutzerklärung</a></p>
+    </div>   
+</div>
+<script src="js/jQuery_3_2_1.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

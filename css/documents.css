@@ -1,0 +1,72 @@
+body{
+  font-family: Roboto;
+  background: #134E5E;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #71B280, #134E5E);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #71B280, #134E5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+    font-size: 5.0em;    
+    text-align: center;
+    font-family: Joti One;
+}
+
+h2 {
+    font-size: 3.0em;
+    text-align: left;
+    font-family: Joti One;
+    margin-left: 1%;
+}
+
+h3 {
+    font-size: 2em;
+    text-align: left;
+    font-family: Joti One;
+    margin-left: 1.66%;
+    text-align: center;
+}
+
+li {
+  margin-left: 1.66%;
+}
+
+p {
+  margin-left: 2%;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+img {
+  width: 40%;
+
+  margin:1.66%;
+}
+
+
+
+.brd{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: gray;
+  width:40px;
+  height:40px;
+  float: left;
+}
+/*font-size*/
+/*font-family*/
+/*font-weight*/
+/*font-height*/
+/*font-align*/
+/*font-decoration*/
+
+/*Content width*/
+/*Content height*/
+/*border*/
+/*padding*/
+/*margin*/

@@ -1,0 +1,163 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>...noch eine Raspberry-Seite</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/berry.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+  <a class="navbar-brand" href="index.html"><i class="fa fa-globe" aria-hidden="true"></i></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">News <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Projekte
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="berrycar_start.html">Berrycar</a>
+          <a class="dropdown-item" href="retropi_start.html">Retropi</a>
+          <a class="dropdown-item" href="nvidiashield_start.html">NVIDIA-SHIELD</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Sensoren und Zubehör
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="sensoren_start.html">Sensoren</a>
+          <a class="dropdown-item" href="zubehoer_start.html">Zubehör</a>
+          <a class="dropdown-item" href="bauteile_start.html">Bauteile</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Programmiersprachen
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="c_start.html">C/C++/C#</a>
+          <a class="dropdown-item" href="python_start.html">Python</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="ide_start.html">IDEs, Betriebssysteme</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="suchen" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<div id="center"><img src="img/berryheader_1152_150_grey.jpg"></div>
+<h1></h1>
+<div class="row">
+  <div class="col-md-2" id="leftsidebar_projects">
+    <ul>
+      <li><a href="berrycar_start.html">Fahrgestell und Zubehör</a></li>
+      <li><a href="berrycar_motoren.html">Motoren und Boards</li></a>
+      <li><a href="berrycar_steuerung.html">Motorsteuerung</li></a>
+      <li>Remote steuern</li>
+      <ul>
+        <li><a href="berrycar_remoteweb.html">über Weboberfläche</li></a>
+        <li><a href="berrycar_remotepython.html">Python-App</li></a>
+      </ul>
+    </ul> 
+  </div>
+  <div class="col-md-8" id="content">
+Der Code auf dem Raspberry übernimmt folgende Aufgaben:
+<ul>
+ 	<li>Motorsteuerung</li>
+ 	<li>Ausgabe und Verarbeitung der Sensoren</li>
+ 	<li>Verbindungsaufbau mit dem Client (Socketserver)</li>
+</ul>
+&nbsp;
+<h2>Socketserver</h2>
+Die Verbindung zwischen Benutzer und Auto wird über eine Socket-Kommunikation realisiert. Das Auto dient in unserem Fall als TCP-Socket-Server für die entsprechenden Clients. Wie man die Verbindung herstellt, ist hier beschrieben.
+
+Befehle, die der Socketserver verarbeiten muss:
+<ul>
+ 	<li>Vorwärts</li>
+ 	<li>Rückwärts</li>
+ 	<li>Rechts</li>
+ 	<li>Links</li>
+ 	<li>Stop</li>
+ 	<li>Schneller</li>
+ 	<li>Langsamer</li>
+ 	<li>horizontale Kamerabewegung nach links</li>
+ 	<li>horizontale Kamerabewegung nach rechts</li>
+ 	<li>vertikaleKamerabewegung nach oben</li>
+ 	<li>vertikaleKamerabewegung nach unten</li>
+</ul>
+<h2>Motorsteuerung</h2>
+Die vier Gleichstrommotoren treiben das Auto an. Dabei wird die Laufrichtung der Motoren für die Steuerung des Fahrzeugs verwendet. Für jede Motorzustand, also vorwärts, rückwärts oder stop,erstellen wir für nun eine eigene Funktion.
+<h2>Sensoren</h2>
+IR
+
+Ultraschall
+
+&nbsp;
+<h3>Daten senden und empfangen</h3>
+Jetzt ist eine Verbindung zwischen beiden Geräten aufgebaut und wir können Daten empfangen und senden. Zuerst senden wir eine Nachricht an den Client, damit wir später auch beim Client sehen,dass jemand auf seine Anfragen hört.
+
+Anschließend empfangen wir bis zum Abbruch des Programms nun die Daten des Clients.
+<pre class="line-numbers"><code class="language-python">def init_con(conn):
+    ser_response = 'Hier ist der Socket-Server'
+    conn.send(str.encode(cmd))  
+    while True:
+        client_response = str(conn.recv(1024), "utf-8")
+        print (client_response, end="")</code></pre>
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+<p style="text-align: right;">weiter zu Schritt 2: Motortreiberboard</p>
+  </div>
+      <div class="col-md-2" id="rightsidebar_projects">
+        <h3>Einkaufsliste</h3>
+        <ul>
+          <li>Sets</li>
+            <ul>
+              <li>über Weboberfläche</li>
+              <li>Python-App</li>
+          </ul>
+          <li>Motoren</li>
+            <ul>
+              <li>über Weboberfläche</li>
+              <li>Python-App</li>
+           </ul>
+          <li>Treiberboards</li>
+            <ul>
+              <li>über Weboberfläche</li>
+              <li>Python-App</li>
+            </ul>          
+        </ul>
+        <hr>
+        <h3>weitere Tips</h3>
+          <ul>
+            <li>Motoren</li>
+            <li>Socketprogrammierung</li>
+         </ul>        
+      </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12" id="footer">
+      <br>
+      <br>
+      <p>2017 | <a href="impressum.html">Impressum</a> | <a href="impressum.html">Datenschutzerklärung</a></p>
+    </div>   
+</div>
+<script src="js/jQuery_3_2_1.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

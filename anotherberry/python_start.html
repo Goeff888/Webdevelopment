@@ -1,0 +1,189 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>...noch eine Raspberry-Seite</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/berry.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg  fixed-top navbar-light bg-light">
+  <a class="navbar-brand" href="index.html"><i class="fa fa-globe" aria-hidden="true"></i></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">News <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Projekte
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="berrycar_start.html">Berrycar</a>
+          <a class="dropdown-item" href="retropi_start.html">Retropi</a>
+          <a class="dropdown-item" href="nvidiashield_start.html">NVIDIA-SHIELD</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Sensoren und Zubehör
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="sensoren_start.html">Sensoren</a>
+          <a class="dropdown-item" href="zubehoer_start.html">Zubehör</a>
+          <a class="dropdown-item" href="bauteile_start.html">Bauteile</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Programmiersprachen
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="c_start.html">C/C++/C#</a>
+          <a class="dropdown-item" href="python_start.html">Python</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="ide_start.html">IDEs, Betriebssysteme</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="suchen" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<div id="center"><img src="img/berryheader_1152_150_grey.jpg"></div>
+<h1></h1>
+<div class="row">
+  <div class="col-md-2" id="leftsidebar">
+    <ul>
+      <li><a href="python_start.html">Allgemein</a></li>
+      <li><a href="python_datentypen.html">Zahlen</a></li>
+      <li><a href="python_start.html">Strings</a></li>
+      <li><a href="python_datentypen.html">weitere Datentypen</a></li>      
+    </ul>
+  
+  </div>
+  <div class="col-md-8" id="content">
+    <h2>Was ist Python</h2>
+    <p>
+    Die Programmiersprache Python ist eine schnell zu erlernende und trotzdem sehr mächtige Programmiersprache.
+    Für den Raspberry lassen sich damit sehr schnell effektive Programme erstellen.
+    Auf der <a href="https://www.python.org/">offiziellen Homepage</a> findet man alle Informationen und die zugehörigen Dateien.
+    </p>
+    <h2>Entwicklungsumgebungen</h2>
+    <p>
+      Im <a ref="https://wiki.python.org/moin/IntegratedDevelopmentEnvironments">Python-Wiki</a> gibt es eine ausführliche Übersicht zu den Entwicklungsumgebungen für Python.
+      Ich persönlich habe meinen Gefallen an Komodo Edit von Active State bekommen. 
+    </p>
+    <h2>Warum zwei Versionen?</h2>
+    <p>Da noch nicht alle Funktionen aus Versionen 2 in Version unterstützt werden, existieren derzeit zwei parallele Versionen für die Programmierung.
+    Beide Pakete werden derzeit mit Erweiterungen unterstützt. Hier geht es zu den Downloadlinks:
+    </p>
+    <ul>
+      <li><a href="https://www.python.org/ftp/python/2.7.14/python-2.7.14.msi">Version 2.7</a></li>
+      <li><a href="https://www.python.org/downloads/release/python-363/">Version 3.6</a></li>
+    </ul>
+    <h3>Unterschiede</h3>
+    <p>Die einzelnen Versionsunterschiede sind <a href="http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html">hier</a>sehr gut beschrieben.</p>
+    <h4>Das future modul</h4>
+    <p>
+      In Version 3 wurden einige Sprachelemente aus Version 2 in inkompatibler Form übernommen.
+      Damit man in Version 2 darauf zugreifen kann wurde das __future__-Modul eingeführt.
+    </p>
+    <h4>Der Zeichensatz</h4>
+    <p>
+      Python 2 verwendet ASCII-Typen und hat kein Byte für den Typ(<code class="highlighter-rouge">str()</code> types, separate <code class="highlighter-rouge">unicode()</code>,).
+      In Python 3 gibt es schließlich Unicode (utf-8) strings, und zwei Byte-Klassen: byte und bytearrays.
+    </p>
+    <h4>Die Integer Division</h4>
+    <p>
+      Hier ist zu beachten, dass in Python2 die Division von ganzen Zahlen eine ganze Zahl zurückliefert.
+      Nachkommastellen werden abgeschnitten.
+    </p>
+   <h4>Die print Funktion</h4>
+    <p>
+      Die wohl auffälligste Änderung ist der Einsatz von Klammern bei der Print-Funktion. Die Klammern konnten in Python 2 hinzugefügt oder weggelassen werden. In PYthon3 müssen sie hinzugefügt werden.
+    </p>
+    
+    <h3>Python Code ausführen</h3>
+    <ul>
+      <li><a href="http://jupyter.org/">Jupyter</a></li>
+      <li><a href="https://www.python-kurs.eu/skript_ausfuehren.php">Konsole</a></li>
+    </ul>
+    <h2><a href ="http://www.gtkdb.de/index_7_2912.html">Tipps &amp;Tricks</a></h2>
+    <p>>Wie findet man heraus welche Version auf dem aktuellen System installiert ist?</p>  
+    Unter Linux:  
+   python -V
+   Python 2.6.6
+    [root@centos6 ~]# <b>python --version</b>
+    Python 2.6.6
+    
+    &nbsp;
+    
+    Unter Windows:
+    platform
+    platform.python_version()
+    '3.0.0'</blockquote>
+    Durch den Befehl <i>which</i> können Sie herausfinden in welchem Verzeichnis der Python Interpreter installiert ist.
+    
+    which python
+    /usr/bin/python 
+    
+    <h4>Unter Windows:</h4>
+    <p>Unter Windows ist ein kleines Skripot nötig bzw. müssen folgende Komandos in der Konsole eingeben werden</p>
+    <div class="code">
+    import os
+    import sys
+    os.pathdirname(sys.executable)
+   </div>
+    'C:\\Python25'
+
+    
+    Umgebungsavariable
+    
+    Next, set the system’s PATH variable to include directories that include Python components and packages we’ll add later. To do this:
+    <ul>
+      <li>Open the Control Panel (easy way: click in the Windows search on your task bar and type “Control Panel” then click the icon).</li>
+      <li>In the Control Panel, search for Environment; click Edit the System Environment Variables. Then click the Environment Variables button.</li>
+      <li>In the User Variables section, we will need to either edit an existing PATH variable or create one. If you are creating one, make PATH the variable name and add the following directories to the variable values section as shown, separated by a semicolon. If you’re editing an existing PATH, the values are presented on separate lines in the edit dialog. Click New and add one directory per line.</li>
+    </ul>
+    <div class="wp_syntax">
+    <table>
+    <tbody>
+    <tr>
+    <td class="code">
+    <pre class="dos">C:\Python35-32;C:\Python35-32\Lib\site-packages\;C:\Python35-32\Scripts\</pre>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+      </div>
+      <div class="col-md-2" id="rightsidebar">
+        <ul>
+          <li>Allgemein</li>
+          <li>Datentypen</li>
+          <li>Funktionen</li>
+          <li>Objektorientierte Programmierung</li>
+          <li>Socket-Programmierung</li>
+        </ul>
+      </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12" id="footer">
+      <br>
+      <br>
+      <p>2017 | Impressum | Datenschutzerklärung</p>
+    </div>   
+</div>
+<script src="js/jQuery_3_2_1.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

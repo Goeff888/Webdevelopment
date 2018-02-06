@@ -1,0 +1,151 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>...noch eine Raspberry-Seite</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/berry.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+  <a class="navbar-brand" href="index.html"><i class="fa fa-globe" aria-hidden="true"></i></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">News <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Projekte
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="berrycar_start.html">Berrycar</a>
+          <a class="dropdown-item" href="retropi_start.html">Retropi</a>
+          <a class="dropdown-item" href="nvidiashield_start.html">NVIDIA-SHIELD</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Sensoren und Zubehör
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="sensoren_start.html">Sensoren</a>
+          <a class="dropdown-item" href="zubehoer_start.html">Zubehör</a>
+          <a class="dropdown-item" href="bauteile_start.html">Bauteile</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Programmiersprachen
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="c_start.html">C/C++/C#</a>
+          <a class="dropdown-item" href="python_start.html">Python</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="ide_start.html">IDEs, Betriebssysteme</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="suchen" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<div id="center"><img src="img/berryheader_1152_150_grey.jpg"></div>
+<h1></h1>
+<div class="row">
+  <div class="col-md-2" id="leftsidebar">
+    <ul>
+      <li><a href="python_start.html">Allgemein</a></li>
+      <li><a href="python_datentypen.html">Zahlen</a></li>
+      <li><a href="python_start.html">Strings</a></li>
+      <li><a href="python_datentypen.html">weitere Datentypen</a></li>
+    </ul>
+  
+  </div>
+  <div class="col-md-8" id="content">
+    <h2>Syntax</h2>
+    <h2>Zahlentypen</h2>
+    <p>
+      Wie in jeder Programmiersprache gibt es verschiedene Arten Zahlen darzustellen bzw damit zu arbeiten. Dies können Ganzzahlen (integer) als auch Fließkommazahlen (float) sein.
+    </p>
+    <table>
+      <tr>
+        <td>Beispiel</td>
+        <td>Zahlentypen</td>
+      </tr>
+    </table> 
+    <h2>Grundsätzliche Arithmetik</h2>
+      <ul>
+        <li>Addition</li>
+        <li>Subtraktion</li>
+        <li>Multiplikation</li>
+        <li>Division (Achtung Versionsunterschied!)</li>
+        <li>Potenzen und Wurzel</li>
+      </ul>
+    <h3>Hinweise zur Arithmetik</h3>
+    <p>
+      Einige Gesetze Gesetze zur Reihenfolge der Berechnung aus der Mathematik gelten auch in Python. Dazu gehören die Operatorrangfolge (Punkt-vor-Strick-Rechnung), sowie Assoziativ- und Kommutativgesetz. 
+      Das ist wichtig für die Berechnung verschachtelter Ausdrücke und dem Setzen der Klammern .
+    </p>
+    <h2>Zahlen in Variablen speichern</h2>
+    <p>
+      Im Gegensatz zu anderen Programmiersprachen wie C oder Jave muss der Variablentyp nicht explizit in Python deklariert werden. 
+      Python legt den Datentyp an Hand der Schreibweise automtisch fest.
+      Für die Namensgebung von Variablen gelten folgende Regeln:
+    </p>
+    <ul>
+      <li>Es darf keine Leerzeichen im Namen geben, nutzt stattdessen _</li>
+      <li>Folgende Zeichen dürfen nicht beinhaltet sein: '",<>/?|()!@#$%^&*~-+</li>
+      <li>Es wird üblicherweise so gehandhabt Namen klein zu schreiben</li>
+      <li>Namen dürfen nicht mit einer Zahl beginnen</li>
+    </ul>
+<h2>Strings-Zeichenketten</h2>
+<p>
+  Ein String gilt als eine Sequenz, in der alle Elemente einzeln und in einer festen Reihenfolge behandelt  und indiziert werden. Sequenzen tauchen in Python oft auf.
+  Weitere Sequenzen in Python sind.
+</p>
+  <ul>
+    <li>Strings</li>
+    <li>Listen</li>
+    <li>Tupel</li>
+    <li>Binärdaten</li>
+  </ul>
+<h3> Erstellen von Zeichenketten</h3>
+<h3> (Formatierte) Ausgabe von Zeichenketten</h3>
+Funktionen: format()
+<h3> Strings indizieren</h3>
+<h3> Strings bearbeiten</h3>
+
+Du kannst den Hashtag # benutzen, um Kommentare in deinem Code zu schreiben.
+Funktionen: upper, lower, split, format
+
+      </div>
+      <div class="col-md-2" id="rightsidebar">
+        <ul>
+          <li>Allgemein</li>
+          <li>Datentypen</li>
+          <li>Funktionen</li>
+          <li>Objektorientierte Programmierung</li>
+          <li>Socket-Programmierung</li>
+        </ul>
+      </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12" id="footer">
+      <br>
+      <br>
+      <p>2017 | Impressum | Datenschutzerklärung</p>
+    </div>   
+</div>
+<script src="js/jQuery_3_2_1.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

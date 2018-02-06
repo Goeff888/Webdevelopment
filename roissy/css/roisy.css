@@ -1,0 +1,24 @@
+body {
+  font-size: 22px;
+  background: #0E0B16;
+}
+
+p {
+  color: #4717E6;
+}
+
+h1{
+  color: #E7DFDD;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+img{
+  text-align: left;
+  margin-left: 1%;
+}
+

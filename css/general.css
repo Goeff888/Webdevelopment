@@ -1,0 +1,53 @@
+body{
+  font-family: Joti One;
+}
+
+h1 {
+    font-size: 5.0em;
+    text-align: center;
+    
+}
+
+h2 {
+    font-size: 3.0em;
+    text-align: left;
+    margin-left: 1%;
+}
+
+h3 {
+    font-size: 2em;
+    text-align: left;
+    margin-left: 1.66%;
+    text-align: center;
+}
+
+li {
+  margin-left: 1.66%;
+}
+
+p {
+  margin-left: 2%;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+img {
+  width: 40%;
+  margin:1.66%;
+}
+/*font-size*/
+/*font-family*/
+/*font-weight*/
+/*font-height*/
+/*font-align*/
+/*font-decoration*/
+
+/*Content width*/
+/*Content height*/
+/*border*/
+/*padding*/
+/*margin*/

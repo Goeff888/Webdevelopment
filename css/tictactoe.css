@@ -1,0 +1,52 @@
+body {
+  font-size: 10px;  
+}
+h1 {
+    font-size: 5.0em;
+    text-align: center;
+    font-family: Joti One;
+}
+table{
+  margin: auto;
+}
+
+td{
+  width: 100px;
+  height: 100px;
+  
+}
+
+.vertical{
+  border-left:1px solid black;
+  border-right:1px solid black;
+}
+
+.horizontal{
+    border-top:1px solid black;
+    border-bottom:1px solid black;
+}
+p {
+    width:50%;
+    border: 2px solid blue;
+    font-size: 3.0em;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+}
+
+span {
+    font-size: 3.0em;  
+}
+
+/*font-size*/
+/*font-family*/
+/*font-weight*/
+/*font-height*/
+/*font-align*/
+/*font-decoration*/
+
+/*Content width*/
+/*Content height*/
+/*border*/
+/*padding*/
+/*margin*/
